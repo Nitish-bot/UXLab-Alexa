@@ -50,4 +50,24 @@ How alexa can help
 	- Use progress markers like "Firstly, we will be doing xyz" or "Okay got it" to reaffirm the user that their input has been understood.
 	- **Repeat the user input** so they can make sure alexa heard it correctly.
 
-- Keep context
+- Keep context and room for edge cases/ less than ideal answers
+	- Let them over-answer as well as under-answer, take all the information if you have got it or ask again if they didnt give enough
+	- Don't make them restate what they have already said
+	- Hold context from previous sessions/ conversations
+	- Don't be too obvious
+
+- Use casual tone & grammar
+	- Not everything we say in conversation is absolutely correct grammatically but that does not matter.
+	- Speak in active voice.
+	- Avoid jargons and formal language, use shortforms 
+	- Use fewest words to convey most meaning
+
+- Bring variability
+	- Everytime a single task/skill is performed, it shouldn't repeat the same one thing, it could say hello, hi, or even a longer intro like "so what are we learning today?"
+	- Use context to bring variability that uses information you already have to make their experience smoother
+
+- Handle errors gracefully
+	- No need to apologize everytime, you can say "would you repeat that one more time?", "sorry I wasn't listening"
+	- If there is any ambiguity get it cleared immediately      { If user gives time as 8, ask if it is in the am or pm }
+
+- Use SSML to add variance to volume, emphasis, breaks and speed of speech to make it sound more human like and not monotonous.
