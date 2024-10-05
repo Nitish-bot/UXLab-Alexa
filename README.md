@@ -71,3 +71,27 @@ How alexa can help
 	- If there is any ambiguity get it cleared immediately      { If user gives time as 8, ask if it is in the am or pm }
 
 - Use SSML to add variance to volume, emphasis, breaks and speed of speech to make it sound more human like and not monotonous.
+
+
+
+### 03-10-24 Continued documentation
+
+How does Alexa interpret our language? because it doesn't understand words infact what it receives is a jumble of 0s and 1s, that is just noise. Thankfully alexa does all the interpretation for us and can detect with a great accuracy what words have been spoken.
+
+Let's say we create called "animal sounds", to use that skill we would need to tell alexa that the question we ask is directed to that particular skill.
+
+A typical command to alexa looks like "Alexa, ask animal sounds to play a random bird sound"
+- 'Alexa' is the wakeup word, once it hears this keyword it knows that the user is trying to communicate with it
+- 'ask' is the starting phrase, there are more like 'launch', 'resume', 'run', 'begin', 'talk to', etc. These phrases indicate to alexa that you are about to name the skill you want to use. **THIS IS IMPORTANT**
+- 'animal sounds' is the invocation name which is a unique identifier for your skill, it also happens to be the name of the skill but that is not necessary
+- 'play a random bird sound' is called an utterance, this is what the user will say to use your skill, this will not be ideal and the users can use any words they want so we will have to understand the same meaning conveyed in all the different ways
+
+There are 2 more parts of an alexa command that are more developer focused
+
+- **Intents :** This is the logic of the code triggered when the user makes a request like 'play a random bird sound', this request triggers a behaviour which we can call 'BirdSoundintent', a single skill can have multiple intents.
+	- This what we understand the user intends to do with our skill, from our skill animal sounds, there could be multiple intents such as getBirdSound or getCuteSound, how we bucket these is completely upto the developer.
+- **Slots :** These are like additional information for us to use that might or might not be necessary, we can choose to handle a user request without any slots or double down and ask for more information if the user skips it.
+	- Example: "Book me a ticket from portland to ohio on friday", in this case the slots and their respective fillers would be
+	- fromCity : portland
+	- toCity : ohio
+	- travelDate : Friday which is then converted into an actual date using the nearest friday
