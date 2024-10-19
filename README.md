@@ -196,11 +196,11 @@ Additional things to consider
 2. Persistent Attributes
    - Long-term storage that persists across sessions
    - Use for remembering user preferences or progress
-   - Stored in DynamoDB (Amazon's NoSQL database service)
+   - Stored in DynamoDB (Amazon's NoSQL database service) // **currently stuck here**
 
 3. User Profile API
    - Allows access to certain user information (with permissions)
-   - Can retrieve data like name, email, phone number
+   - Can retrieve data like name, hobbies and the like
 
 4. Custom Data Storage
    - Implement your own database solution for more complex data storage
@@ -250,19 +250,17 @@ Additional things to consider
 ### Considerations and Challenges
 
 1. Privacy and Security
-   - Ensure compliance with children's privacy laws (e.g., COPPA)
    - Implement robust security measures for storing personal data
+   - This is especially important since amazon takes skills directed towards kids very seriously and any form of data collection could be seen as violation of terms.
 
 2. Ethical AI Use
    - Ensure AI-generated content is appropriate and safe for children
    - Avoid creating dependencies or excessive screen time
 
 3. Scalability
-   - Design the system to handle multiple users per device (e.g., siblings)
+   - Design the system to handle multiple users with same name
    - Ensure quick data retrieval and processing for smooth interactions
 
 4. Testing and Iteration
    - Conduct extensive testing with diverse groups of children
    - Continuously gather feedback and improve the conversation flow
-
-Remember: When implementing these features, always prioritize the child's privacy, safety, and well-being. Ensure all data collection and AI interactions comply with relevant regulations and Alexa's policies for child-directed skills.
